@@ -6,15 +6,22 @@ public class Main {
 
     
     public static void main(String[] args) {
-        int[] enteros = new int[100]; //{100, 99, 98, 97, 96, 95, 94, 93, 92, 91, 90};
-        int tamañoVector = enteros.length - 100;
-        //System.out.println(tamañoVector);
-        int resultado = enteros[1]+enteros[10];
-    
-        
-        for(int i=0; i<enteros.length; i++){
-            System.out.println("Numero " + enteros[i] );
+        int [] numeros = new int[15];
+        int suma=0;
+        for (int i = 0; i < numeros.length; i++) {
+           int aleat = (int)(Math.random()* 15+1);
+           System.out.println("num "+aleat);
+           numeros[i] = aleat;
+        }  
+      for (int i = 0; i < numeros.length; i++) {
+          suma+=numeros[i];
+          
+      }
+            double promedio = suma/numeros.length;
+            System.out.println("suma : " + suma);
+            System.out.println("promedio : " + promedio);
+
         }
     }
     
-}
+
